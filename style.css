@@ -220,3 +220,12 @@ nav h1 {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   width: 100%;
 }
+#opspark a:hover {
+  background: #ee9090;
+  color: #000000;
+}
+
+#khan a:hover {
+  background: #4a90e2;
+  color: #030303;
+}
