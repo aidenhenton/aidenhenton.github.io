@@ -214,6 +214,7 @@ nav h1 {
   min-height: auto;
 }
 .portfolio-box {
+  text-align: center; width: 100%; margin: 0;
   background: #ffffff;
   padding: 32px 40px;
   border-radius: 16px;
