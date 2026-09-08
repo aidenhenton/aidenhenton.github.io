@@ -17,3 +17,9 @@ canvas {
 img {
   display: none;
 }
+canvas {
+  background-color: rgb(173, 230, 176);
+  margin: 20px;
+
+}
+
