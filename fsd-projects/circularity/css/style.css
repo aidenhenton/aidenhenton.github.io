@@ -1,4 +1,12 @@
 /* Game mode button styles */
+ body {
+        background-image: url("../img/Background.png");
+        background-color: #cccccc;
+         -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+     }
 .game-mode-btn {
     margin: 5px;
     padding: 10px 15px;
