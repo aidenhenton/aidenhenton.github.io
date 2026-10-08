@@ -157,6 +157,12 @@ describe('Circularity', function() {
             expect(circle.x === -circle.radius).to.be.true;
         });
 
+        it('should not wrap a circle before it has cleared the right edge', function() {
+            circle = { x: canvas.width - 5, y: 1, radius: 10 };
+            checkCirclePosition(circle);
+            expect(circle.x).to.equal(canvas.width - 5);
+        });
+
         it('should move a circle to offscreen-right after moving offscreen-left', function() {
             circle = { x: -5, y: 1, radius: 1 };
             checkCirclePosition(circle);

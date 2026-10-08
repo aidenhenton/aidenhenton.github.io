@@ -125,11 +125,25 @@ var Gamification = (function () {
     player1.y = PLAYER_START_POSITIONS.player1.y;
 
     // Ensure player1 stays within canvas bounds
-    var margin = player1.radius + 10;
-    if (player1.x > canvas.width - margin) player1.x = canvas.width - margin;
-    if (player1.y > canvas.height - margin) player1.y = canvas.height - margin;
-    if (player1.x < margin) player1.x = margin;
-    if (player1.y < margin) player1.y = margin;
+            var rightEdge = player1.x + player1.radius;
+            var leftEdge = player1.x - player1.radius;
+            var topEdge = player1.y - player1.radius;
+            var bottomEdge = player1.y + player1.radius;
+
+            if ( leftEdge > canvas.width ) {
+                player1.x = 0 - player1.radius;
+            }
+            
+            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
+            if ( rightEdge < 0) {
+                player1.x = canvas.width + player1.radius;
+            }
+            if ( bottomEdge > canvas.height ) {
+                player1.y = canvas.height + player1.radius ;
+            }
+            if ( topEdge < 0 ) {
+                player1.y = 0 - player1.radius ;
+            }
 
     // Set initial velocity to 0
     player1.velocityX = 0;
@@ -165,12 +179,25 @@ var Gamification = (function () {
     player2.y = PLAYER_START_POSITIONS.player2.y;
 
     // Ensure player2 stays within canvas bounds
-    var margin = player2.radius + 10;
-    if (player2.x > canvas.width - margin) player2.x = canvas.width - margin;
-    if (player2.y > canvas.height - margin) player2.y = canvas.height - margin;
-    if (player2.x < margin) player2.x = margin;
-    if (player2.y < margin) player2.y = margin;
+        var rightEdge = player2.x + player2.radius;
+            var leftEdge = player2.x - player2.radius;
+            var topEdge = player2.y - player2.radius;
+            var bottomEdge = player2.y + player2.radius;
 
+            if ( leftEdge > canvas.width ) {
+                player2.x = 0 - player2.radius;
+            }
+            
+            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
+            if ( rightEdge < 0) {
+                player2.x = canvas.width + player2.radius;
+            }
+            if ( bottomEdge > canvas.height ) {
+                player2.y = canvas.height + player2.radius ;
+            }
+            if ( topEdge < 0 ) {
+                player2.y = 0 - player2.radius ;
+            }
     // Set initial velocity to 0
     player2.velocityX = 0;
     player2.velocityY = 0;
